@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
-import Navbar from "../Components/Navbar";
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -11,16 +11,15 @@ export default function Home() {
         <meta name="keywords" content="javascript, reactjs, css, nextjs, huntingcoders, hunting coder blog,"/>
         <link rel="icon" href="/nextjs-icon.png" />
       </Head>
-     <Navbar/>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-         Hunting Coder
-        </h1>
 
+      <main className={styles.main}>
+        <h1 className={styles.title}>Hunting Coder</h1>
         <p className={styles.description}>
           <code className={styles.code}>A blog for hunting coders by hunting coder.</code>
         </p>
-        
+        <div>
+          <Image src="/blog.jpg" width="600" height="200" alt="blogImage"></Image>
+        </div>
         <div className={styles.blogsWrapper}>
         <h2>Popular Blogs</h2>
         <div className={styles.blogItem}>

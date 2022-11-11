@@ -1,0 +1,22 @@
+
+.navbarWrapper{
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+  }
+  .navbarWrapper>ul{
+    display: flex;
+    justify-content:center;
+  }
+  .navbarWrapper>ul>li{
+    list-style: none;
+    text-decoration: none;
+    margin:0px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+.navbarWrapper>ul>li:hover{
+    color: #0070f3;
+}
