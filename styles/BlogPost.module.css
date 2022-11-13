@@ -1,0 +1,24 @@
+.blogpostContiner{
+    min-width:50vw;
+    display: flex;
+    align-items: center;
+    margin:20px 40px;
+    justify-content: center;
+
+}
+.blogsWrapper{
+    padding:0px 20px;
+    min-width:50vw;
+  }
+.blogItem{
+    line-height: 7px;
+    margin-bottom: 5px;
+    background: #fafafa;
+    border-radius: 5px;
+    padding:0.5px 10px;
+    transition:all 0.8s ease;
+}
+.blogTitle:hover{
+   color:red;
+   cursor:pointer;
+}

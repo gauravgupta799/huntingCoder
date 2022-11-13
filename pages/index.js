@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 import Image from 'next/image'
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -21,28 +23,21 @@ export default function Home() {
           <Image src="/blog.jpg" width="600" height="200" alt="blogImage"></Image>
         </div>
         <div className={styles.blogsWrapper}>
-        <h2>Popular Blogs</h2>
-        <div className={styles.blogItem}>
-          <h3>How to learn Javascript 2022?</h3>
-          <p>To learn Javascript, you have to open this link for full details descriptions</p>
-        </div>
-        <div className={styles.blogItem}>
-          <h3>How to learn Javascript 2022?</h3>
-          <p>To learn Javascript, you have to open this link for full details descriptions</p>
-        </div>
-        <div className={styles.blogItem}>
-          <h3>How to learn Javascript 2022?</h3>
-          <p>To learn Javascript, you have to open this link for full details descriptions</p>
-        </div>
-        <div className={styles.blogItem}>
-          <h3>How to learn Javascript 2022?</h3>
-          <p>To learn Javascript, you have to open this link for full details descriptions</p>
-        </div>
-        <div className={styles.blogItem}>
-          <h3>How to learn Javascript 2022?</h3>
-          <p>To learn Javascript, you have to open this link for full details descriptions</p>
-        </div>
-
+          <h2>Latest Blogs</h2>
+         <Link href={"/blog"}>
+            <div className={styles.blogItem}>
+              <h3>How to learn Javascript 2022?</h3>
+              <p>To learn Javascript, you have to open this link for full details descriptions</p>
+            </div>
+          </Link>
+          <div className={styles.blogItem}>
+            <h3>How to learn Javascript 2022?</h3>
+            <p>To learn Javascript, you have to open this link for full details descriptions</p>
+          </div>
+          <div className={styles.blogItem}>
+            <h3>How to learn Javascript 2022?</h3>
+            <p>To learn Javascript, you have to open this link for full details descriptions</p>
+          </div>
         </div>
         
       </main>
