@@ -1,23 +1,35 @@
-import React from 'react';
+import React,{useState, useEffect } from 'react';
 import styles from "../styles/BlogPost.module.css";
 import Link from "next/link";
 
 
 const Blog = () => {
+    const [blogs, setBlogs]= useState([]);
+    useEffect(() =>{
+        fetch("http://localhost:3000/api/blogs")
+        .then(res => res.json())
+        .then((data) =>setBlogs(data));
+    },[]);
+    //   console.log("Data",blogs)
     return (
         <div className={styles.blogpostContiner}>
-            <div className={styles.blogsWrapper}>
-                <div className={styles.blogItem}>
-                <Link href={"/blogpost/learn-jacscript"}>
-                    <h3 className={styles.blogTitle}>How to learn Javascript 2022?</h3>
-                </Link>
-                    <p>To learn Javascript, you have to open this link for full details descriptions</p>
-                </div>
-                <div className={styles.blogItem}>
-                    <h3 className={styles.blogTitle}>How to learn Javascript 2022?</h3>
-                    <p>To learn Javascript, you have to open this link for full details descriptions</p>
-                </div>
-            </div>
+            {  blogs.map((item) =>{
+                return(
+                    <>
+                        <div className={styles.blogsWrapper}>
+                            <div className={styles.blogItem}>
+                                <Link href={`/blogpost/${item.slug}`}>
+                                    <h3 className={styles.blogTitle}>
+                                    {item.title}
+                                    </h3>
+                                </Link>
+                                <p>{item.content.substr(0,150)}....</p>
+                            </div>              
+                        </div>
+                    </>
+                )
+                })
+            } 
         </div>
     )
 }

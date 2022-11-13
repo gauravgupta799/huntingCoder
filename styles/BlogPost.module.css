@@ -1,6 +1,6 @@
 .blogpostContiner{
     min-width:50vw;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     margin:20px 40px;
     justify-content: center;
@@ -11,7 +11,6 @@
     min-width:50vw;
   }
 .blogItem{
-    line-height: 7px;
     margin-bottom: 5px;
     background: #fafafa;
     border-radius: 5px;
