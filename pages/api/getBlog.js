@@ -1,8 +1,8 @@
 import * as fs from 'fs';
-// http://localhost:3000/api/getBlogs?slug=how-to-learn-javscript
+// http://localhost:3000/api/getBlog?slug=how-to-learn-javascript;
 
 export default function handler(req, res) {
-    fs.readFile(`BlogsData/${req.query.slug}.json`, 'utf-8', (err, data) => {
+  fs.readFile(`BlogsData/${req.query.slug}.json`, 'utf-8', (err, data) => {
         if(err){
             res.status(402).json({error:"No such blog found!"});
         }

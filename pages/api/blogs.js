@@ -6,7 +6,6 @@ export default async function handler(req, res) {
    let allBlogs= [];
    for(let index=0; index < data.length; index++){
       const item = data[index];
-      console.log(item)
       let myfile = await fs.promises.readFile(`BlogsData/${item}`,'utf-8')
       allBlogs.push(JSON.parse(myfile));
    }
