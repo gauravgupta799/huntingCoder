@@ -1,0 +1,10 @@
+.aboutContainer{
+    margin:20px;
+}
+.aboutInnerContainer{
+    height:80vh;
+    display:grid;
+    align-items:center;
+    justify-content:center;
+
+}
