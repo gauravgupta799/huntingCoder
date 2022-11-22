@@ -1,11 +1,24 @@
 import React,{useState} from "react";
 import styles from "../styles/ContactStyle.module.css";
+import {toast } from 'react-toastify';
 
 const Contact = () => {
 	const [ user, setUser] = useState({
 		name:"", email:"", phone:"",message:""
 	})
 
+	const notify = () => toast.success('🦄 Success',
+	 {
+		position: "top-right",
+		autoClose: 1000,
+		hideProgressBar: false,
+		closeOnClick: true,
+		pauseOnHover: true,
+		draggable: true,
+		progress: undefined,
+		theme: "dark",
+	})
+	
 	const handleChange = (event) => {
        const Name = event.target.name;
 	   const Value = event.target.value
@@ -13,9 +26,26 @@ const Contact = () => {
 	}
 
 	const handleSubmit=(e) => {
-      e.preventDefault();
-	  console.log(user)
+		e.preventDefault();
+		// console.log(user)
+		try{
+			fetch("http://localhost:3000/api/postContact",{
+				method:"POST",
+				headers:{
+					'Content-type':'application/json',
+				},
+				body:JSON.stringify(user),
+			})
+			.then((response) => response.json())
+			.then(data => {
+				console.log("Success & Data", data)
+				notify();
+			})
+		}catch(err) {
+			console.log(err);
+		}
 	}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.row}>
