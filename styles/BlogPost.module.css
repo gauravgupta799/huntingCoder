@@ -1,10 +1,8 @@
 .blogpostContiner{
     min-width:50vw;
-    /* display: flex; */
     align-items: center;
     margin:20px 40px;
     justify-content: center;
-
 }
 .blogsWrapper{
     padding:0px 20px;

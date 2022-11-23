@@ -9,28 +9,29 @@ const Blog = () => {
         .then(res => res.json())
         .then((data) =>setBlogs(data));
     },[]);
-    //   console.log("Data",blogs)
-    
+
     return (
-        <div className={styles.blogpostContiner}>
-            {  blogs.map((item) =>{
-                return(
-                    <>
-                        <div className={styles.blogsWrapper} key={item.title}>
-                            <div className={styles.blogItem}>
-                                <Link href={`/blogpost/${item.slug}`}>
-                                    <h3 className={styles.blogTitle}>
-                                    {item.title}
-                                    </h3>
-                                </Link>
-                                <p>{item.content.substr(0,150)}....</p>
-                            </div>              
-                        </div>
-                    </>
-                )
-                })
-            } 
-        </div>
+        <>
+            <div className={styles.blogpostContiner}>
+                {  blogs.map((item) =>{
+                    return(
+                        <>
+                            <div className={styles.blogsWrapper} key={item.title}>
+                                <div className={styles.blogItem}>
+                                    <Link href={`/blogpost/${item.slug}`}>
+                                        <h3 className={styles.blogTitle}>
+                                        {item.title}
+                                        </h3>
+                                    </Link>
+                                    <p>{item.content.substr(0,150)}....</p>
+                                </div>              
+                            </div>
+                        </>
+                    )
+                    })
+                } 
+            </div>
+        </>
     )
 }
 

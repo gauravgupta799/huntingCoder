@@ -44,9 +44,8 @@ const Contact = () => {
 			console.log(err);
 		}
 	}
-
 	return (
-		<div className={styles.container}>
+		// <div className={styles.container}>
 			<div className={styles.row}>
 				<form className={styles.formHorizontal} onSubmit={handleSubmit}>
 				       <h2 id={styles.title}>Contact Us</h2>
@@ -95,7 +94,7 @@ const Contact = () => {
 					</div>
 				</form>
 			</div>
-		</div>
+		// </div>
 	);
 };
 

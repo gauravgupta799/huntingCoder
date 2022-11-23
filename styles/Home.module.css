@@ -3,14 +3,12 @@
 }
 
 .main {
-  /* min-height: 100vh; */
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .footer {
   display: flex;
   flex: 1;
@@ -19,29 +17,25 @@
   justify-content: center;
   align-items: center;
 }
-
 .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
 }
-
 .description {
   margin: 1rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
-
 .code {
   background: #fafafa;
   border-radius: 5px;
   padding: 0.75rem;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
-
 .grid {
   display: flex;
   align-items: center;
@@ -49,7 +43,6 @@
   flex-wrap: wrap;
   max-width: 800px;
 }
-
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -61,31 +54,26 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
 }
-
 .card:hover,
 .card:focus,
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
 }
-
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
-
 .card p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
 }
-
 .blogsWrapper{
   padding:0px 20px;
   min-width:55vw;
 }
 .blogItem{
- line-height: 7px;
  margin-bottom: 5px;
  background: #fafafa;
  border-radius: 5px;
@@ -95,4 +83,30 @@
 }
 .blogItem:hover{
   transform:scale(1.03);
+}
+@media (max-width:680px) and (min-width:480px){
+  .code{
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0px;
+  }
+  .title{
+    margin: 3px;
+  }
+  .ImgContainer{
+    min-width:400px;
+  }
+  #Img{
+    width:450px;
+  }
+}
+@media (max-width:481px){ 
+  .code{
+      font-size: 1rem;
+      margin: 0px;
+      padding: 0px;
+  }
+  #Img{
+    max-width:300px;
+  }
 }

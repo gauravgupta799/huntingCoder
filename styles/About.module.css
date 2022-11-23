@@ -19,10 +19,8 @@
     margin:auto 2.5rem;
     margin-top: 20px;
     padding:0px 20px;
-   
 }
 .introContainer{
-    /* border:1px solid red; */
     text-align:center;
     padding:1rem;
 }
@@ -30,12 +28,10 @@
     margin-top: 25px;
 }
 .servicesWrapper{
-    /* border:1px solid red; */
     display:flex;
     flex-direction:column;
     text-align:center;
     padding: 20px 0px;
-    /* margin-top: 20px; */
 }
 .cardContainer{
     display:flex;
