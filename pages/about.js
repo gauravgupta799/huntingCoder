@@ -1,26 +1,64 @@
 import styles from "../styles/About.module.css";
-import { toast } from 'react-toastify';
 
 const About = () => {
-  const notify = () => toast.error('🦄 Success', {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
 
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.aboutInnerContainer}>
-        <h2>About Us</h2>
-        <button onClick={notify}>Notify!</button>
-      </div>    
+        <h1>Hunting Coder</h1>
+        <p>Lorem Hunting Coder Latest blogs gest lksfp wer blogss sdh
+        sffsdfds sdfd debugger Generatedf draggableg draggableg
+        </p>
+      </div> 
+      <div className={styles.bottomWrapper}>
+        <div className={styles.introContainer}>
+          <h1>Introduction</h1>
+          <p>
+          Lorem Hunting Coder Latest blogs gest lksfp wer blogss sdh
+          sffsdfds sdfd debugger Generatedf draggableg draggableg.
+          Lorem Hunting Coder Latest blogs gest lksfp wer blogss sdh
+          sffsdfds sdfd debugger Generatedf draggableg draggableg.
+          Lorem Hunting Coder Latest blogs gest lksfp wer blogss sdh
+          sffsdfds sdfd debugger Generatedf draggableg draggableg
+          </p>
+        </div>
+        <div className={styles.servicesWrapper}>
+          <h1>Our Services</h1>
+          <div className={styles.cardContainer}>
+              <div className={styles.card}>
+
+              </div>
+              <div className={styles.card}>
+
+              </div>
+              <div className={styles.card}>
+
+              </div>
+              <div className={styles.card}>
+
+              </div>
+          </div>
+        </div>
+        <div className={styles.servicesWrapper}>
+          <h1>Our Customers</h1>
+          <div className={styles.cardContainer}>
+              <div className={styles.ctmrCard}>
+
+              </div>
+              <div className={styles.ctmrCard}>
+
+              </div>
+              <div className={styles.ctmrCard}>
+
+              </div>
+              <div className={styles.ctmrCard}>
+
+              </div>
+          </div>
+          
+        </div>
+      </div>   
     </div>
   )
 }
-
 export default About

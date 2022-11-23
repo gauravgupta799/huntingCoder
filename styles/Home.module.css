@@ -80,17 +80,9 @@
   line-height: 1.5;
 }
 
-
-/* @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-} */
-
 .blogsWrapper{
   padding:0px 20px;
-  min-width:50vw;
+  min-width:55vw;
 }
 .blogItem{
  line-height: 7px;

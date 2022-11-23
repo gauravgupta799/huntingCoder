@@ -6,7 +6,6 @@ const Contact = () => {
 	const [ user, setUser] = useState({
 		name:"", email:"", phone:"",message:""
 	})
-
 	const notify = () => toast.success('🦄 Success',
 	 {
 		position: "top-right",
@@ -58,6 +57,7 @@ const Contact = () => {
 							placeholder='Your Name'
 							className={styles.form_control}
 							onChange={handleChange}
+							required
 						/>
 						<input
 							id='email'
@@ -66,6 +66,7 @@ const Contact = () => {
 							placeholder='Your Email'
 							className={styles.form_control}
 							onChange={handleChange}
+							required
 						/>
 						<input
 							id='phone'
@@ -75,6 +76,7 @@ const Contact = () => {
 							// pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
 							className={styles.form_control}
 							onChange={handleChange}
+							required
 						/>
 						<textarea
 							className={styles.form_control}
@@ -83,6 +85,7 @@ const Contact = () => {
 							placeholder='Please enter your message here...'
 							rows={5}
 							onChange={handleChange}
+							required
 						/>
 						
 					<div className={styles.btnWrapper}>

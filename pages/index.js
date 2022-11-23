@@ -13,7 +13,6 @@ export default function Home() {
         <meta name="keywords" content="javascript, reactjs, css, nextjs, huntingcoders, hunting coder blog,"/>
         <link rel="icon" href="/nextjs-icon.png" />
       </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>Hunting Coder</h1>
         <p className={styles.description}>
@@ -27,7 +26,10 @@ export default function Home() {
          <Link href={"/blog"}>
             <div className={styles.blogItem}>
               <h3>How to learn Javascript 2022?</h3>
-              <p>To learn Javascript, you have to open this link for full details descriptions</p>
+              <p>
+              To learn Javascript, you have to open this link for full details descriptions.
+              learn Javascript, you have to open this link for full details description
+              </p>
             </div>
           </Link>
           <div className={styles.blogItem}>
@@ -39,12 +41,7 @@ export default function Home() {
             <p>To learn Javascript, you have to open this link for full details descriptions</p>
           </div>
         </div>
-        
       </main>
-
-      <footer className={styles.footer}>
-         Powered by Hunting Coder
-      </footer>
     </div>
   )
 }
